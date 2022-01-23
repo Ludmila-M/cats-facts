@@ -4,8 +4,8 @@ import Emoji from '../Emoji/Emoji'
 function Navbar(props: any) {
   return (
     <div className="navbar">
-      <Emoji symbol="🌙" label="moon" />
-      how is the moon today?
+      <Emoji symbol="🐱" label="cat" />
+      cool cat fact?
     </div>
   )
 }

@@ -2,17 +2,18 @@ import { useState } from 'react';
 import "./Card.scss";
 
 function Card(props: any) {
-  const [stateAge, setState] = useState(Boolean);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleButton = () => setIsOpen(!isOpen);
+  console.log(props.data)
+  const randomFact = props.data[Math.floor(Math.random()*props.data.length)]
   return (
     <div className="card">
       {props.isFetching ? (
-        <span>how is the moon today?</span>
+        <span>learn a cat fact</span>
       ) : (
           <div className="card__content">
-            <div className="card__content-item" onClick={() => setState(true)}>The moon is {props.age} days old today</div>
-            {stateAge ? <div>test</div> : null}
-            <div className="card__content-item" onClick={() => setState(true)}>Illumination: {props.illumination}</div>
-            <div className="card__content-item" onClick={() => setState(true)}>Stage: {props.stage}</div>
+            <div className="card__content-item" onClick={toggleButton}>click to learn</div>
+            {isOpen && <div>{randomFact}</div>}
           </div>
         )}
     </div>
