@@ -1,0 +1,23 @@
+#root {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.App {
+  text-align: center;
+  background: #304655;
+  min-height: 100%;
+  font-family: monospace;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
