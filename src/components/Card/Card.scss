@@ -1,15 +1,16 @@
 .card {
-  color: #F1E6C1;
+  color: #271c19;
   position: absolute;
   top: 30%;
   width: 100%;
   margin: 0 auto;
-  &__content {
-    &-item {
-      margin: 3rem 0;
-      padding: 1rem 0;
-      background: #3F6A8A;
-      cursor: pointer;
-    }
+  &__item {
+    cursor: pointer;
+    margin: 3rem 0;
+    padding: 1rem 0;
+    background: #ffc0ad;
+  }
+  &__trivia {
+    color: #f1e6c1;
   }
 }
