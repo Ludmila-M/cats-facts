@@ -1,16 +1,19 @@
+@import '../../variables.scss';
+
 .card {
-  color: #271c19;
-  position: absolute;
-  top: 30%;
-  width: 100%;
-  margin: 0 auto;
-  &__item {
-    cursor: pointer;
-    margin: 3rem 0;
-    padding: 1rem 0;
-    background: #ffc0ad;
-  }
+  color: $color-yellow;
+  min-height: 250px;
   &__trivia {
-    color: #f1e6c1;
+    flex-direction: column;
+   &--hidden {
+    display: none;
+   }
+   &--visible {
+    display: flex;
+   }
+  }
+  &__trivia-image {
+    height: 200px;
+    aspect-ratio: 3/2;
   }
 }

@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.cat-fact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  color: $color-yellow;
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

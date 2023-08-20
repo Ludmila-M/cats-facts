@@ -1,15 +1,25 @@
+@import '../../variables.scss';
+
+@keyframes show {
+  from { display: none; opacity: 0;}
+  to { opacity: 1;}
+}
+
 .alert {
-    color: #271c19;
-    width: 100%;
-    margin: 0 auto;
-    &__item {
-      cursor: pointer;
-      margin: 3rem 0;
-      padding: 1rem 0;
-      background: #ffc0ad;
-    }
-    &__trivia {
-      color: #f1e6c1;
-    }
+  position: absolute;
+  left: $triangle-size;
+  top: 50px;
+  width: $triangle-size;
+  height: $triangle-size;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  &__trivia {
+    color: $color-yellow;
   }
-  
+  &--animate {
+    animation: show 300ms;
+    display: block;
+  }
+}

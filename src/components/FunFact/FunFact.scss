@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+
+.fun-fact {
+  &__button {
+    position: absolute;
+    left: 0;
+    width: $triangle-size;
+    height: $triangle-size;
+    border-radius: 0;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 $triangle-size $triangle-size 0;
+      border-color: transparent #fffffe transparent transparent;
+      transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      left: 0;
+      top: 0;
+      position: absolute;
+    }
+  }
+  &__icon {
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    cursor: pointer;
+    transition: transform 330ms ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

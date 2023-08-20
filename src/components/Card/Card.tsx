@@ -1,5 +1,5 @@
 import React from "react";
-import { ProgressBar } from "react-loader-spinner";
+import { Circles } from "react-loader-spinner";
 import "./Card.scss";
 
 interface CardContentProps {
@@ -21,8 +21,8 @@ const CardContent = ({
   origin,
 }: CardContentProps) => {
   return (
-    <div>
-      <img src={image_link} alt={name} height="50px" />
+    <div className={`card__trivia ${image_link !== "" ? 'card__trivia--visible' : 'card__trivia--hidden'}`}>
+      <img src={image_link} alt={name} height="50px" className="card__trivia-image" />
       <span>{name}</span>
       <span>{origin}</span>
       <span>{length}</span>
@@ -34,30 +34,28 @@ const Card: React.FC<CardProps> = ({ isFetching, data }) => {
   return (
     <div className="card">
       {isFetching ? (
-        <ProgressBar
+        <Circles
           height="80"
           width="80"
-          ariaLabel="progress-bar-loading"
+          color="#fffffe"
+          ariaLabel="circles-loading"
           wrapperStyle={{}}
-          wrapperClass="progress-bar-wrapper"
-          borderColor="#F4442E"
-          barColor="#51E5FF"
+          wrapperClass=""
+          visible={true}
         />
       ) : (
-        <div className="card">
-          <div className="card__trivia">
-            {data
-              ? data.map((e: CardContentProps) => (
-                  <CardContent
-                    key={e.name}
-                    image_link={e.image_link}
-                    name={e.name}
-                    length={e.length}
-                    origin={e.origin}
-                  />
-                ))
-              : null}
-          </div>
+        <div>
+          {data
+            ? data.map((e: CardContentProps) => (
+                <CardContent
+                  key={e.name}
+                  image_link={e.image_link}
+                  name={e.name}
+                  length={e.length}
+                  origin={e.origin}
+                />
+              ))
+            : null}
         </div>
       )}
     </div>

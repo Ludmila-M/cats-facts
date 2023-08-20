@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.scss";
-import { FunFact, Form } from "./components/index";
+import { FunFact, CatFact } from "./components/index";
 
 const App = () => {
   return (
     <div className="app">
       <FunFact />
-      <Form />
+      <CatFact />
     </div>
   );
 };

@@ -4,12 +4,13 @@ import "./Alert.scss";
 interface CardProps {
   isFetching: boolean;
   data: string;
+  className: any;
 }
 
-const Alert: React.FC<CardProps> = ({ isFetching, data }) => {
+const Alert: React.FC<CardProps> = ({ isFetching, data, className }) => {
   const randomFact = data ? data[Math.floor(Math.random() * data.length)] : "";
   return (
-    <div className="alert">
+    <div className={className}>
       {isFetching ? (
         <span>learn a cat fact</span>
       ) : (
