@@ -14,7 +14,7 @@ const Alert: React.FC<CardProps> = ({ isFetching, data, className }) => {
       {isFetching ? (
         <span>learn a cat fact</span>
       ) : (
-        <div className="alert__trivia">{randomFact}</div>
+        <div className="cat-alert__trivia">{randomFact}</div>
       )}
     </div>
   );

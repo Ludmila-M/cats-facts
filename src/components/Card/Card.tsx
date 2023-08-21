@@ -2,6 +2,8 @@ import React from "react";
 import { Circles } from "react-loader-spinner";
 import "./Card.scss";
 
+const MAX_CATS_NUMBER = 1;
+
 interface CardContentProps {
   image_link: string;
   name: string;
@@ -21,18 +23,29 @@ const CardContent = ({
   origin,
 }: CardContentProps) => {
   return (
-    <div className={`card__trivia ${image_link !== "" ? 'card__trivia--visible' : 'card__trivia--hidden'}`}>
-      <img src={image_link} alt={name} height="50px" className="card__trivia-image" />
-      <span>{name}</span>
-      <span>{origin}</span>
-      <span>{length}</span>
+    <div
+      className={`cat-card__trivia ${
+        image_link !== ""
+          ? "cat-card__trivia--visible"
+          : "cat-card__trivia--hidden"
+      }`}
+    >
+      <img
+        src={image_link}
+        alt={name}
+        height="50px"
+        className="cat-card__trivia-image"
+      />
+      <span>Name: {name}</span>
+      <span>Origin: {origin}</span>
+      <span>Length: {length}</span>
     </div>
   );
 };
 
 const Card: React.FC<CardProps> = ({ isFetching, data }) => {
   return (
-    <div className="card">
+    <div className="cat-card mt-5">
       {isFetching ? (
         <Circles
           height="80"
@@ -45,8 +58,10 @@ const Card: React.FC<CardProps> = ({ isFetching, data }) => {
         />
       ) : (
         <div>
-          {data
-            ? data.map((e: CardContentProps) => (
+          {data.length ? (
+            data
+              .slice(0, MAX_CATS_NUMBER)
+              .map((e: CardContentProps) => (
                 <CardContent
                   key={e.name}
                   image_link={e.image_link}
@@ -55,7 +70,9 @@ const Card: React.FC<CardProps> = ({ isFetching, data }) => {
                   origin={e.origin}
                 />
               ))
-            : null}
+          ) : (
+            <span>no results</span>
+          )}
         </div>
       )}
     </div>

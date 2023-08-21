@@ -33,7 +33,7 @@ const FunFact = () => {
       <button onClick={handleClick} className="fun-fact__button">
         <Lightbulb className="fun-fact__icon" />
       </button>
-      {showAlert && <Alert isFetching={!fetchedData} data={fetchedData} className={`alert ${triviaVisibleFirstTime && 'alert--animate'}`}/>}
+      {showAlert && <Alert isFetching={!fetchedData} data={fetchedData} className={`cat-alert pt-3 pt-md-0 ${triviaVisibleFirstTime && 'cat-alert--animate'}`}/>}
     </div>
   );
 };

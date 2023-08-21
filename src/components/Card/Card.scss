@@ -1,8 +1,12 @@
 @import '../../variables.scss';
 
-.card {
+.cat-card {
   color: $color-yellow;
-  min-height: 250px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
   &__trivia {
     flex-direction: column;
    &--hidden {
@@ -10,6 +14,7 @@
    }
    &--visible {
     display: flex;
+    gap: 0.5rem;
    }
   }
   &__trivia-image {

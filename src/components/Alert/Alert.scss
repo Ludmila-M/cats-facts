@@ -1,25 +1,41 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 @keyframes show {
-  from { display: none; opacity: 0;}
-  to { opacity: 1;}
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.alert {
+.cat-alert {
   position: absolute;
-  left: $triangle-size;
-  top: 50px;
-  width: $triangle-size;
-  height: $triangle-size;
+  left: $triangle-size - 80px;
+  top: 10px;
+  width: $triangle-size + 100px;
+  height: max-content;
   border-radius: 0;
   overflow: hidden;
   background-color: transparent;
   border: none;
+  margin: 0;
   &__trivia {
     color: $color-yellow;
+    font-size: 0.75rem;
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
   }
   &--animate {
     animation: show 300ms;
     display: block;
+  }
+  @media (min-width: 768px) {
+    top: 30px;
+    left: $triangle-size;
+    width: $triangle-size + 100px;
+    height: $triangle-size + 100px;
   }
 }

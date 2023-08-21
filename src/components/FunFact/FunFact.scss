@@ -4,8 +4,8 @@
   &__button {
     position: absolute;
     left: 0;
-    width: $triangle-size;
-    height: $triangle-size;
+    width: $triangle-size - 50px;
+    height: $triangle-size - 50px;
     border-radius: 0;
     overflow: hidden;
     border: none;
@@ -15,13 +15,20 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 0 $triangle-size $triangle-size 0;
+      border-width: 0 100px 100px 0;
       border-color: transparent #fffffe transparent transparent;
       transform: rotate(270deg);
       -webkit-transform: rotate(270deg);
       left: 0;
       top: 0;
       position: absolute;
+    }
+    @media (min-width: 768px) {
+      width: $triangle-size;
+      height: $triangle-size;
+      &::after {
+        border-width: 0 $triangle-size $triangle-size 0;
+      }
     }
   }
   &__icon {
@@ -31,8 +38,17 @@
     left: 10%;
     cursor: pointer;
     transition: transform 330ms ease-in-out;
+    width: 2.5rem;
+    height: 2.5rem;
     &:hover {
-      transform: scale(1.2);
+      transform: none;
+      @media (min-width: 768px) {
+        transform: scale(1.2);
+      }
+    }
+    @media (min-width: 768px) {
+      width: 3.5em;
+      height: 3.5em;
     }
   }
 }

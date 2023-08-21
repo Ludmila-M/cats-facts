@@ -1,16 +1,14 @@
 @import "../../variables.scss";
 
 .cat-fact {
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
   color: $color-yellow;
-  &__form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
+  padding-top: 20vh;
+  @media (min-width: 768px) {
+    height: 100vh;
+    padding-top: 0;
   }
 }

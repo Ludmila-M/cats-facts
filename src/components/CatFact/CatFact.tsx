@@ -41,7 +41,7 @@ const CatFact = () => {
   };
 
   return (
-    <div className="cat-fact">
+    <div className="cat-fact container col-12">
       <div>
         sample names:{" "}
         {sampleNames.map((name: string) => (
