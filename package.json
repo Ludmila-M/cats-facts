@@ -1,7 +1,7 @@
 {
   "name": "cats-facts",
   "version": "0.1.0",
-  "homepage": "https://ludmila-m.github.io/cats-facts",
+  "homepage": "https://ludmila-m.github.io/cats-facts/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -16,7 +16,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build", 
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
