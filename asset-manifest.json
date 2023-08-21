@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cats-facts/static/css/main.1870e3b1.css",
+    "main.js": "/cats-facts/static/js/main.bd7da6e5.js",
+    "static/js/787.819dd480.chunk.js": "/cats-facts/static/js/787.819dd480.chunk.js",
+    "index.html": "/cats-facts/index.html",
+    "static/media/lightbulb-outline.svg": "/cats-facts/static/media/lightbulb-outline.f9342f06c7576bbe0f86dd9ad51404dc.svg",
+    "main.1870e3b1.css.map": "/cats-facts/static/css/main.1870e3b1.css.map",
+    "main.bd7da6e5.js.map": "/cats-facts/static/js/main.bd7da6e5.js.map",
+    "787.819dd480.chunk.js.map": "/cats-facts/static/js/787.819dd480.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1870e3b1.css",
+    "static/js/main.bd7da6e5.js"
+  ]
+}
